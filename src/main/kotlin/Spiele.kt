@@ -17,7 +17,7 @@ fun starteKornsucheSpiel(spielNummer: Int) {
 fun starteZiffernLegenSpiel(spielNummer: Int) {
     starteSpielAusSpielMenge(object : SpielMenge {
         override val spielPrefix: String = "ziffern_legen"
-        override val interval: IntRange = 0..2
+        override val interval: IntRange = 0..1
     }, spielNummer)
 }
 
