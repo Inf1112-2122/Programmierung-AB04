@@ -1,10 +1,32 @@
 import de.github.dudrie.hamster.imperative.de.starteSpiel
 
-fun starteXXSpiel(spielNummer: Int) {
+fun starteBisZurWandSpiel(spielNummer: Int) {
     starteSpielAusSpielMenge(object : SpielMenge {
-        override val spielPrefix: String = "PREFIX"
+        override val spielPrefix: String = "leerer_gang"
+        override val interval: IntRange = 0..3
+    }, spielNummer)
+}
+
+fun starteKornsucheSpiel(spielNummer: Int) {
+    starteSpielAusSpielMenge(object : SpielMenge {
+        override val spielPrefix: String = "kornsuche"
         override val interval: IntRange = 0..2
     }, spielNummer)
+}
+
+fun starteZiffernLegenSpiel(spielNummer: Int) {
+    starteSpielAusSpielMenge(object : SpielMenge {
+        override val spielPrefix: String = "ziffern_legen"
+        override val interval: IntRange = 0..2
+    }, spielNummer)
+}
+
+fun starteBinaerSpiel() {
+    starteSpiel("territories/binaergang")
+}
+
+fun starteWegDurchsTerritoriumSpiel() {
+   starteSpiel("territories/startsuche_0")
 }
 
 private fun starteSpielAusSpielMenge(menge: SpielMenge, spielNummer: Int) {
