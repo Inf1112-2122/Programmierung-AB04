@@ -29,11 +29,20 @@ fun legeZahl(zahl: Int) {
     var rest: Int = zahl
 
     while (rest > 0) {
-        val ziffer: Int = rest % 10
+        val ziffer: Int = bestimmeLetzteZiffer(rest)
         legeZiffer(ziffer)
-        rest = rest / 10
+        rest = schneideLetzteZifferAb(rest)
         laufe()
     }
+}
+
+
+fun bestimmeLetzteZiffer(zahl: Int): Int {
+    return zahl % 10
+}
+
+fun schneideLetzteZifferAb(zahl: Int): Int {
+    return zahl / 10
 }
 
 fun legeZiffer(ziffer: Int) {
