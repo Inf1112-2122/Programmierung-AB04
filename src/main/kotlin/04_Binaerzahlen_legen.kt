@@ -1,7 +1,7 @@
 import de.github.dudrie.hamster.imperative.de.*
 
 fun main() {
-    legeAlsBinaerzahl(0)
+    legeAlsBinaerzahl(5)
 }
 
 fun legeAlsBinaerzahl(dezimalzahl: Int) {
@@ -27,6 +27,6 @@ fun bestimmeBinaerZiffer(zahl: Int): Int {
     return zahl % 2
 }
 
-fun bestimmeNaechsteZahl(zahl: Int): Int {
-    return zahl / 2
+fun bestimmeNaechsteZahl(vorherigeZahl: Int): Int {
+    return vorherigeZahl / 2
 }

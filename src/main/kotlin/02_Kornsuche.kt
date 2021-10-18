@@ -15,16 +15,16 @@ fun main() {
 }
 
 fun pruefeKreis(kreisRadius: Int) {
-    var anzahl: Int = 0
+    var gepruefteSeiten: Int = 0
 
-    while (istDeinMundLeer() && anzahl < 4) {
-        pruefeReihe(kreisRadius)
+    while (istDeinMundLeer() && gepruefteSeiten < 4) {
+        pruefeSeite(kreisRadius)
         dreheNachLinks()
-        anzahl++
+        gepruefteSeiten++
     }
 }
 
-fun pruefeReihe(kreisRadius: Int) {
+fun pruefeSeite(kreisRadius: Int) {
     var kornGefunden: Boolean = false
     var schritte: Int = 0
 
