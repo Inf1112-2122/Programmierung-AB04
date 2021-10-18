@@ -1,4 +1,25 @@
+import de.github.dudrie.hamster.imperative.de.legeKornAb
+import de.github.dudrie.hamster.imperative.de.liegtEinKornAufDeinemFeld
+import de.github.dudrie.hamster.imperative.de.sammleKornAuf
+
 val PI: Double = 3.14
+
+fun zaehleKoerner(): Int {
+    var anzahl: Int = 0
+
+    while (liegtEinKornAufDeinemFeld()) {
+        sammleKornAuf()
+        anzahl = anzahl + 1
+        // anzahl += 1
+        // anzahl++
+    }
+
+    repeat(anzahl) {
+        legeKornAb()
+    }
+
+    return anzahl
+}
 
 fun main() {
     val summandA: Int = 5
